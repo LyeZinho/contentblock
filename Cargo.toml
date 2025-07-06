@@ -1,0 +1,22 @@
+[package]
+name = "domain_blocker"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "domain_blocker"
+path = "src/main.rs"
+
+[[bin]]
+name = "test_dns"
+path = "test_dns.rs"
+
+[dependencies]
+trust-dns-server = "0.22"
+trust-dns-client = "0.22"
+trust-dns-resolver = "0.22"
+tokio = { version = "1.37", features = ["full"] }
+lazy_static = "1.4"
+dashmap = "5.5"
+async-trait = "0.1"
+anyhow = "1.0"
